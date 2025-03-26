@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Streaming Website - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #303030;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        #search-input {
+            background-color: #1e1e1e;
+            border: none;
+            padding: 8px;
+            color: #e0e0e0;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        main {
+            padding: 15px;
+        }
+
+        #video-player-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            display: none;
+        }
+
+        #video-player {
+            width: 100%;
+            max-height: 500px;
+            background-color: #000;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .video-item {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            text-align: center;
+        }
+
+        .video-item:hover {
+            transform: scale(1.03);
+        }
+
+        .video-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .video-item h3 {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .video-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Streaming Website</h1>
+        <input type="text" id="search-input" placeholder="Search...">
+    </header>
+    <main>
+        <div id="video-player-container">
+            <video 
+                id="video-player" 
+                controls 
+                autoplay 
+                playsinline 
+                webkit-playsinline
+            ></video>
+        </div>
+        <div class="video-grid">
+            <div class="video-item" data-video="https://s101.downet.net/download/1743036357/67e34e45a4860/Lam.Shamsia.E01.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode1">
+                <h3>Episode 1</h3>
+            </div>
+            <div class="video-item" data-video="https://s103.downet.net/download/1743036467/67e34eb31a568/Lam.Shamsia.E02.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode2">
+                <h3>Episode 2</h3>
+            </div>
+            <div class="video-item" data-video="https://s102.downet.net/download/1743036518/67e34ee66ed62/Lam.Shamsia.E03.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode3">
+                <h3>Episode 3</h3>
+            </div>
+            <div class="video-item" data-video="https://s103.downet.net/download/1743036613/67e34f45392dd/Lam.Shamsia.E04.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode4">
+                <h3>Episode 4</h3>
+            </div>
+            <div class="video-item" data-video="https://s102.downet.net/download/1743036690/67e34f9262502/Lam.Shamsia.E05.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode5">
+                <h3>Episode 5</h3>
+            </div>
+            <div class="video-item" data-video="https://s101.downet.net/download/1743036722/67e34fb22b056/Lam.Shamsya.E06.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode6">
+                <h3>Episode 6</h3>
+            </div>
+            <div class="video-item" data-video="https://s103.downet.net/download/1743036800/67e35000af01b/Lam.Shamsia.E07.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode7">
+                <h3>Episode 7</h3>
+            </div>
+            <div class="video-item" data-video="https://s104.downet.net/download/1743036866/67e35042a5d11/Lam.Shamsia.E08.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode8">
+                <h3>Episode 8</h3>
+            </div>
+            <div class="video-item" data-video="https://s104.downet.net/download/1743036889/67e350597f7eb/Lam.Shamsia.E09.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode9">
+                <h3>Episode 9</h3>
+            </div>
+            <div class="video-item" data-video="https://s104.downet.net/download/1743036927/67e3507f88da1/Lam.Shamsia.E10.AKWAM.mp4">
+                <img src="https://via.placeholder.com/300x180" alt="Episode10">
+                <h3>Episode 10</h3>
+            </div>
+            <div class="video-item" data-video="https://dm10g1dffdvwerwe432vxcvxcvbcx321scvxv45cdsw1dfdsfsd.visitmycityfor365days.online/v/01/00109/3ocrkicg9vgb_h/[Cimawbas]%D9%84%D8%A7%D9%85_%D8%B4%D9%85%D8%B3%D9%8A%D8%A9_%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9_11.mp4?t=T-gYUktHdeye2OnN5YujiH7TEx2k5MPV_5C2vv_7v_s&s=1743009891&e=43200&f=548635&sp=150&i=0.0">
+                <img src="https://via.placeholder.com/300x180" alt="Episode11">
+                <h3>Episode 11</h3>
+                    
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const videoPlayerContainer = document.getElementById('video-player-container');
+        const videoPlayer = document.getElementById('video-player');
+        const videoItems = document.querySelectorAll('.video-item');
+
+        videoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const videoSrc = item.dataset.video;
+                
+                // Set video source
+                videoPlayer.src = videoSrc;
+                
+                // Show video container
+                videoPlayerContainer.style.display = 'block';
+                
+                // Attempt to play
+                videoPlayer.load(); // Reload the video
+                videoPlayer.play().catch(error => {
+                    console.error('Error attempting to play the video:', error);
+                    alert('Unable to play video. Please check the video source.');
+                });
+            });
+        });
+
+        // Add error handling for video playback
+        videoPlayer.addEventListener('error', (e) => {
+            console.error('Video error:', e);
+            alert('An error occurred while trying to play the video.');
+        });
+    </script>
+</body>
+</html>
